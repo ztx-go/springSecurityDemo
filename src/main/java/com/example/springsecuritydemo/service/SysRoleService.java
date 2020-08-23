@@ -6,4 +6,7 @@ import com.example.springsecuritydemo.entity.SysRole;
 public interface SysRoleService extends IService<SysRole> {
 
     void create(SysRole sysRole);
+
+    SysRole selectByName(String name);
+
 }
