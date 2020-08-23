@@ -1,13 +1,13 @@
 package com.example.springsecuritydemo.service;
 
-import com.example.springsecuritydemo.mapper.SysUserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
-public class SysUserService {
-    @Autowired
-    SysUserMapper sysUserMapper;
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.springsecuritydemo.entity.SysUser;
+
+public interface SysUserService extends IService<SysUser> {
 
 
+    void create(SysUser sysUser);
+
+    SysUser selectByName(String name);
 }
